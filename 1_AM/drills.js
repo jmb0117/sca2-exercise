@@ -4,6 +4,7 @@ const assert = require("assert");
 
 const tokenize = str => {
   // TODO - write a function which converts a multi-word string into an array of words
+  return str.split(" ");
 };
 
 const reverse = str => {
@@ -15,6 +16,18 @@ const uniqueOnes = arr => {
 };
 
 const factorial = num => {
+  let array = [];
+  for(let i = 1; i < num; i++ )
+  { 
+    i.add(array);
+  }
+
+  let answer =  1;
+  for (let i = 0; i <= array.length; i++)
+  {
+    answer = answer * array[i]; 
+  }
+    return answer;
   // TODO - write a function which returns the factorial of a positive integer
 };
 
@@ -22,6 +35,21 @@ const zip = (arr1, arr2) => {
   // TODO - write a function which combines two arrays into an array of 2-element arrays and returns -1
   // if the two arrays are of unequal length
   // Example: zip([1, 2, 3], [5, 3, 1]) === [[1, 5], [2, 3], [3, 1]]
+
+  let newArray = [];
+  if (arr1.length === arr2.length) 
+  {
+    for (i = 1; i < arr1.length; i++) 
+    {
+      newArray.add((arr1[i], arr2[i]));
+    }
+    return newArray;
+
+  }
+  else 
+  return -1;
+
+
 };
 
 const unzip = arr => {
@@ -44,3 +72,5 @@ assert(1 < 2);
 assert(1 + 2 === 3);
 assert([2, 3][0] === 2);
 // asssert (reverse("3df") === "fd3")
+console.log(tokenize("the dog has floppy ears"));
+zip([1,2,3,4], [5,6,7,8]);
